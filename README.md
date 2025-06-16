@@ -40,8 +40,8 @@ A simple command-line tool written in Go to generate static files for a webring,
     name = "meowmoewoow"
     slug = "agh"
     about = "A site about cool stuff."
-    url = "[https://alokranjan.me"
-    github = "https://github.com/ryu-ryuk"
+    url = "https://alokranjan.me"
+    github = "ryu-ryuk"
     owner = "ryu"
     role = "Developer"
 
