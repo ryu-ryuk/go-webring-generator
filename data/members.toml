@@ -1,0 +1,17 @@
+[[members]]
+name = "meowmoewoow"
+slug = "agh"
+about = "A site about cool stuff."
+url = "[https://alokranjan.me"
+github = "https://github.com/ryu-ryuk"
+owner = "ryu"
+role = "Developer"
+
+[[members]]
+name = "Another Great Guy"
+slug = "another-blog"
+about = "Thoughts on technology and life."
+url = "https://blogs.alokranjan.me"
+github = "ryu-ryuk"
+owner = "Another Person"
+role = "Writer"
