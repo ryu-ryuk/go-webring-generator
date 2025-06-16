@@ -20,7 +20,7 @@ A simple command-line tool written in Go to generate static files for a webring,
 
 1.  Clone the repository:
     ```bash
-    git clone [https://github.com/ryu-ryuk/go-webring-generator.git](https://github.com/ryu-ryuk/go-webring-generator.git)
+    git clone https://github.com/ryu-ryuk/go-webring-generator.git
     cd go-webring-generator
     ```
 
