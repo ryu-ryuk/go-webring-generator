@@ -97,6 +97,16 @@ go run server.go
 
 2. Then, open your web browser and navigate to [`http:localhost:8080`](http://localhost:8080). 
 
+## Automated Workflows 
+This project include Github Action workflows for continuous integration and deployment.
+
+* **TOML Validation (`.github/workflows/validate-toml.yml`)**:
+    Automatically checks the `data/members.toml` file for valid TOML syntax on every push and pull request to ensure data integrity.
+
+* **Deploy to GitHub Pages (`.github/workflows/deploy.yml`)**:
+    Automatically builds the static site and deploys it to GitHub Pages whenever changes are pushed to the `main` branch. This assumes your repository is configured for GitHub Pages (usually from the `/public` folder).
+    To enable this, go to your repository settings on GitHub -> Pages and set the source branch to `gh-pages` or `main` (if you are publishing from `main`'s root, but `peaceiris/actions-gh-pages` typically publishes to `gh-pages` branch, so check your settings).
+
 
 ## Contributing
 
