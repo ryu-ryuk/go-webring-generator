@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Webring Site</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>🎲</text></svg>">
+    <script>
+        // js to redirect to a random site from the list
+        document.addEventListener('DOMContentLoaded', function() {
+            const sites = [
+                {{ range $index, $site := .Sites }}
+                    "{{ $site.URL | safe }}",
+                {{ end }}
+            ];
+            if (sites.length > 0) {
+                const randomIndex = Math.floor(Math.random() * sites.length);
+                window.location.replace(sites[randomIndex]);
+            } else {
+                document.getElementById('redirect-message').innerText = 'No sites available for redirection.';
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="full-page-center">
+        <h1>Redirecting to a random webring site...</h1>
+        <p id="redirect-message">If you are not redirected automatically, please ensure JavaScript is enabled.</p>
+        <p><a href="/" class="button">Go back to Webring Index</a></p>
+    </div>
+</body>
+</html>
