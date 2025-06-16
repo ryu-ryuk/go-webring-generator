@@ -88,6 +88,16 @@ go-webring-generator/
     └── styles.css # Static CSS file 
 ```
 
+
+## Testing the Generated site
+1. After generating the static files, you can serve them locally to preview your webring: 
+```bash
+go run server.go
+```
+
+2. Then, open your web browser and navigate to `http:localhost:8080`. 
+
+
 ## Contributing
 
 Contributions are welcome! Please feel free to open an issue or submit a pull request.
