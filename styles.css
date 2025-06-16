@@ -1,0 +1,307 @@
+:root {
+    /* Catppuccin Mocha Palette */
+    --rosewater: #f5e0dc;
+    --flamingo: #f2cdcd;
+    --pink: #f5c2e7;
+    --mauve: #cba6f7;
+    --red: #f38ba8;
+    --maroon: #eba0ac;
+    --peach: #fab387;
+    --yellow: #f9e2af;
+    --green: #a6e3a1;
+    --teal: #94e2d5;
+    --sky: #89dceb;
+    --sapphire: #74c7ec;
+    --blue: #89b4fa;
+    --lavender: #b4befe;
+    --text: #cdd6f4;
+    --subtext1: #bac2de;
+    --subtext0: #a6adc8;
+    --overlay2: #9399b2;
+    --overlay1: #7f849c;
+    --overlay0: #6c7086;
+    --surface2: #585b70;
+    --surface1: #45475a;
+    --surface0: #313244;
+    --base: #1e1e2e; /* Main background */
+    --mantle: #181825;
+    --crust: #11111b;
+
+    /* Semantic Mappings */
+    --primary-color: var(--blue);
+    --accent-color: var(--mauve);
+    --text-color: var(--text);
+    --light-text-color: var(--subtext1);
+    --bg-color: var(--base);
+    --card-bg: var(--surface0);
+    --border-color: var(--surface1);
+    --link-hover-color: var(--lavender); /* Lighter version of blue */
+    --github-color: var(--text); /* Catppuccin has no direct dark grey, use text color */
+    --github-bg: var(--crust); /* A darker background for contrast */
+
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+
+    /* Fonts */
+    --font-family-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-family-heading: "Georgia", serif;
+
+    /* Border Radius */
+    --border-radius: 8px;
+    --button-radius: 5px;
+
+    /* Shadows (adjusted for dark theme) */
+    --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.2);
+    --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: var(--font-family-body);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
+    flex-grow: 1;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: var(--font-family-heading);
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.2;
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
+
+p {
+    margin-bottom: var(--spacing-sm);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+/* Header */
+.site-header {
+    background-color: var(--mantle); /* Darker than base */
+    color: var(--text);
+    padding: var(--spacing-xl) var(--spacing-lg);
+    text-align: center;
+    box-shadow: var(--shadow-medium);
+    border-bottom: 1px solid var(--surface1);
+}
+
+.site-header h1 {
+    color: var(--flamingo); /* A warm accent for the title */
+    margin-bottom: var(--spacing-sm);
+}
+
+.site-header p {
+    color: var(--subtext0);
+    font-size: 1.1em;
+}
+
+.main-nav {
+    margin-top: var(--spacing-md);
+}
+
+.main-nav a {
+    color: var(--base); /* Text on button */
+    background-color: var(--accent-color);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--button-radius);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.main-nav a:hover {
+    background-color: var(--lavender);
+    text-decoration: none;
+    color: var(--base);
+}
+
+
+/* Member List */
+.member-list {
+    margin-top: var(--spacing-xl);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.member-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.member-card h3 {
+    margin-bottom: var(--spacing-xs);
+}
+
+.member-card h3 a {
+    color: var(--blue);
+}
+
+.member-owner {
+    font-size: 0.9em;
+    color: var(--subtext1);
+    margin-bottom: var(--spacing-sm);
+}
+
+.member-about {
+    flex-grow: 1;
+    font-size: 0.95em;
+    margin-bottom: var(--spacing-md);
+    color: var(--subtext0);
+}
+
+.member-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-top: auto;
+}
+
+.nav-button, .gh-link {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--button-radius);
+    font-size: 0.85em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    color: var(--base); /* Text on buttons should be dark for contrast */
+}
+
+.nav-button {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.nav-button:hover {
+    background-color: var(--lavender);
+    border-color: var(--lavender);
+    text-decoration: none;
+}
+
+.gh-link {
+    background-color: var(--github-bg); /* Darker background for GitHub button */
+    color: var(--github-color);
+    border-color: var(--github-bg);
+}
+
+.gh-link:hover {
+    background-color: var(--surface2); /* Lighter hover for github button */
+    border-color: var(--surface2);
+    text-decoration: none;
+}
+
+/* Full Page Center for Random/Redirect */
+.full-page-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 80vh;
+    padding: var(--spacing-lg);
+    color: var(--text-color);
+}
+
+.full-page-center h1 {
+    color: var(--primary-color);
+}
+
+.full-page-center p {
+    color: var(--subtext0);
+}
+
+.button {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--primary-color);
+    color: var(--base); /* Text on button */
+    border-radius: var(--button-radius);
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.button:hover {
+    background-color: var(--lavender);
+    text-decoration: none;
+    color: var(--base);
+}
+
+
+/* Footer */
+.site-footer {
+    background-color: var(--mantle);
+    color: var(--subtext1);
+    text-align: center;
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: 0.9em;
+    margin-top: var(--spacing-xl);
+    border-top: 1px solid var(--surface1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .site-header h1 {
+        font-size: 2em;
+    }
+
+    .container {
+        padding: var(--spacing-md);
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .member-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
