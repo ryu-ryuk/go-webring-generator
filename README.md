@@ -37,20 +37,20 @@ A simple command-line tool written in Go to generate static files for a webring,
     Example `data/members.toml`:
     ```toml
     [[members]]
-    name = "My Awesome Site"
-    slug = "my-awesome-site"
+    name = "meowmoewoow"
+    slug = "agh"
     about = "A site about cool stuff."
-    url = "[https://example.com/my-awesome-site](https://example.com/my-awesome-site)"
-    github = "your-github-username"
-    owner = "Your Name"
+    url = "[https://alokranjan.me"
+    github = "https://github.com/ryu-ryuk"
+    owner = "ryu"
     role = "Developer"
 
     [[members]]
-    name = "Another Great Blog"
+    name = "Another Great Guy"
     slug = "another-blog"
     about = "Thoughts on technology and life."
-    url = "[https://anotherblog.net](https://anotherblog.net)"
-    github = "another-github-user"
+    url = "https://blogs.alokranjan.me"
+    github = "ryu-ryuk"
     owner = "Another Person"
     role = "Writer"
     ```
